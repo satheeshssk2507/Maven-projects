@@ -1,0 +1,20 @@
+public class SampleClass {
+	
+	@BeforeClass
+	private void beforeclass() {
+		UtilityClass u = new UtilityClass();
+		u.launchbrowser();
+		u.loadurl("https://www.facebook.com/login/");
+
+	}
+	
+	@Parameters({"username","password"})
+	@Test
+	private void page(String s1,String s2) {
+		
+	Loginpage logs = new Loginpage();
+	logs.login(s1, s2);
+	
+	}
+}
+
